@@ -26,6 +26,14 @@ public class WeatherActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         toolbar.inflateMenu(R.menu.menu_main);
 
+        // fragment(s)
+        // check if a fragment is already loaded
+        if (savedInstanceState == null) {
+            // add fragment
+            ForecastFragment forecast = new ForecastFragment();
+            getSupportFragmentManager().beginTransaction().add(R.id.main, forecast).commit();
+        }
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
