@@ -1,45 +1,291 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="60dp"
+    android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".ForecastFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/frameLayout2"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="640dp"
-        android:background="#330099"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1">
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="#6621c458"
+        android:orientation="vertical" >
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
+        <!-- 1st -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/hello"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.189" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:orientation="horizontal"
+            android:paddingStart="15dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="15dp"
+            tools:ignore="UseCompoundDrawables">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="364dp"
-        android:text="@string/thursday"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="\n    Mon"
+                android:textSize="17dip" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:layout_width="111dp"
+                android:layout_height="62dp"
+                android:contentDescription="sunny"
+                android:src="@drawable/sunny" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:text="Sunny\n25C-27C"
+                android:autoSizeTextType="uniform" />
+
+        </LinearLayout>
+
+        <!-- 2nd -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            tools:ignore="UseCompoundDrawables" >
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="\n    Tue"
+                android:textSize="17dp" />
+
+            <ImageView
+                android:layout_width="111dp"
+                android:layout_height="62dp"
+                android:src="@drawable/cloudy" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:text="Cloudy\n22C-23C"
+                android:autoSizeTextType="uniform" />
+        </LinearLayout>
+
+        <!-- 3rd -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            tools:ignore="UseCompoundDrawables" >
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="\n    Wed"
+                android:textSize="17dp" />
+
+            <ImageView
+                android:layout_width="111dp"
+                android:layout_height="62dp"
+                android:src="@drawable/rain" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:text="Rainy\n20C-21C"
+                android:autoSizeTextType="uniform" />
+        </LinearLayout>
+
+        <!-- 4th -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            tools:ignore="UseCompoundDrawables" >
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="\n    Thu"
+                android:textSize="17dp" />
+
+            <ImageView
+                android:layout_width="111dp"
+                android:layout_height="62dp"
+                android:src="@drawable/drizzly" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:text="Drizzly\n20C-21C"
+                android:autoSizeTextType="uniform" />
+        </LinearLayout>
+
+        <!-- 5th -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            tools:ignore="UseCompoundDrawables" >
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="\n    Fri"
+                android:textSize="17dp" />
+
+            <ImageView
+                android:layout_width="111dp"
+                android:layout_height="62dp"
+                android:src="@drawable/windy" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:text="Windy\n20C-21C"
+                android:autoSizeTextType="uniform" />
+        </LinearLayout>
+
+        <!-- 6th -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            tools:ignore="UseCompoundDrawables" >
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="\n    Sat"
+                android:textSize="17dp" />
+
+            <ImageView
+                android:layout_width="111dp"
+                android:layout_height="62dp"
+                android:src="@drawable/partly_cloudy" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:text="Partly Cloudy\n22C-23C"
+                android:autoSizeTextType="uniform" />
+
+        </LinearLayout>
+
+        <!-- 7th -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            tools:ignore="UseCompoundDrawables" >
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="\n    Sun"
+                android:textSize="17dp" />
+
+            <ImageView
+                android:layout_width="111dp"
+                android:layout_height="62dp"
+                android:src="@drawable/partly_cloudy" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:text="Partly Cloudy\n22C-23C"
+                android:autoSizeTextType="uniform" />
+
+        </LinearLayout>
+
+        <!-- 8th -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            tools:ignore="UseCompoundDrawables" >
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="\n    Mon"
+                android:textSize="17dp" />
+
+            <ImageView
+                android:layout_width="111dp"
+                android:layout_height="62dp"
+                android:src="@drawable/sunny" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:text="Sunny\n24C-26C"
+                android:autoSizeTextType="uniform" />
+
+        </LinearLayout>
+
+        <!-- 9th -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            tools:ignore="UseCompoundDrawables" >
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="\n    Tue"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:layout_width="111dp"
+                android:layout_height="62dp"
+                android:src="@drawable/partly_cloudy_windy" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:text="Partly Cloudy Windy\n22C-24C"
+                android:autoSizeTextType="uniform" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

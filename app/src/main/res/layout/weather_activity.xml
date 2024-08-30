@@ -5,13 +5,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1c51a6"
     tools:context=".WeatherActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/menu_bar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background="#2970e3"
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/Theme.USTHWeather"
         app:layout_constraintBottom_toBottomOf="parent"
