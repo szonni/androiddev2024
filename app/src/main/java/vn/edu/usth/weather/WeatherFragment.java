@@ -12,13 +12,11 @@ import android.view.ViewGroup;
  * A simple {@link Fragment} subclass.
  * create an instance of this fragment.
  */
-public class ForecastFragment extends Fragment {
+public class WeatherFragment extends Fragment {
 
-
-    public ForecastFragment() {
+    public WeatherFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -29,6 +27,6 @@ public class ForecastFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_forecast, container, false);
+        return inflater.inflate(R.layout.fragment_weather, container, false);
     }
 }

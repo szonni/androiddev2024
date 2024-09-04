@@ -7,13 +7,14 @@
     android:layout_marginTop="60dp"
     android:background="@color/white"
     android:orientation="vertical"
+    android:id="@+id/forecast"
     tools:context=".ForecastFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="45dp"
+
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:background="#6621c458"
@@ -33,7 +34,7 @@
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:text="\n    Mon"
-                android:textSize="17dip" />
+                android:textSize="17sp" />
 
             <ImageView
                 android:layout_width="111dp"
@@ -46,8 +47,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                android:text="Sunny\n25C-27C"
-                android:autoSizeTextType="uniform" />
+                android:autoSizeTextType="uniform"
+                android:text="Sunny\n25C-27C" />
 
         </LinearLayout>
 
@@ -64,7 +65,7 @@
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:text="\n    Tue"
-                android:textSize="17dp" />
+                android:textSize="17sp" />
 
             <ImageView
                 android:layout_width="111dp"
@@ -93,7 +94,7 @@
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:text="\n    Wed"
-                android:textSize="17dp" />
+                android:textSize="17sp" />
 
             <ImageView
                 android:layout_width="111dp"
@@ -122,7 +123,7 @@
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:text="\n    Thu"
-                android:textSize="17dp" />
+                android:textSize="17sp" />
 
             <ImageView
                 android:layout_width="111dp"
@@ -151,7 +152,7 @@
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:text="\n    Fri"
-                android:textSize="17dp" />
+                android:textSize="17sp" />
 
             <ImageView
                 android:layout_width="111dp"
@@ -180,7 +181,7 @@
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:text="\n    Sat"
-                android:textSize="17dp" />
+                android:textSize="17sp" />
 
             <ImageView
                 android:layout_width="111dp"
@@ -210,7 +211,7 @@
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:text="\n    Sun"
-                android:textSize="17dp" />
+                android:textSize="17sp" />
 
             <ImageView
                 android:layout_width="111dp"
@@ -240,7 +241,7 @@
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:text="\n    Mon"
-                android:textSize="17dp" />
+                android:textSize="17sp" />
 
             <ImageView
                 android:layout_width="111dp"
