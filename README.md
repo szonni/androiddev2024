@@ -12,5 +12,5 @@ Student Info
 
 * Name: Nguyễn Trường Sơn
 * ID: BI12-388
-* Group ID: *Your Group ID here*
-* Project Name: *Your Project Name here*
+* Group ID: 17
+* Project Name: OpenVisionAPI Frontend
