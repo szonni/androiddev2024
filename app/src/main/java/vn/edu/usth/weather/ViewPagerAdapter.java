@@ -7,6 +7,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 public class ViewPagerAdapter extends FragmentStateAdapter {
     private static final int PAGE_COUNT = 3;
+    private final String[] titles = new String[] { "Tab 1", "Tab 2", "Tab 3" };
 
     public ViewPagerAdapter(@NonNull FragmentActivity fragmentActivity) {
         super(fragmentActivity);
@@ -26,5 +27,9 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
     @Override
     public int getItemCount() {
         return PAGE_COUNT;
+    }
+
+    public String getPageTitle(int page) {
+        return titles[page];
     }
 }

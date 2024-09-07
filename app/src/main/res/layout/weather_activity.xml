@@ -18,6 +18,12 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/Theme.USTHWeather" />
 
+    <com.google.android.material.tabs.TabLayout
+        android:contentDescription="Tab Layout"
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/pager"
         android:layout_width="match_parent"

@@ -45,4 +45,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    // for TabLayoutMediator and TabLayout
+    implementation(libs.material.v110alpha08)
 }
