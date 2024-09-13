@@ -33,13 +33,15 @@
             <TextView
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:text="\n    Mon"
-                android:textSize="17sp" />
+                android:paddingStart="@dimen/word_padding"
+                android:text="@string/Monday"
+                android:textSize="17sp"
+                tools:ignore="RtlSymmetry" />
 
             <ImageView
-                android:layout_width="111dp"
-                android:layout_height="62dp"
-                android:contentDescription="sunny"
+                android:layout_width="@dimen/small_img_width_111dp"
+                android:layout_height="@dimen/small_img_height_62dp"
+                android:contentDescription="@string/Sunny"
                 android:src="@drawable/sunny" />
 
             <TextView
@@ -48,7 +50,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
                 android:autoSizeTextType="uniform"
-                android:text="Sunny\n25C-27C" />
+                android:text="@string/sunny_n25c_27c" />
 
         </LinearLayout>
 
@@ -64,12 +66,13 @@
             <TextView
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:text="\n    Tue"
+                android:text="@string/Tuesday"
+                android:paddingStart="@dimen/word_padding"
                 android:textSize="17sp" />
 
             <ImageView
-                android:layout_width="111dp"
-                android:layout_height="62dp"
+                android:layout_width="@dimen/small_img_width_111dp"
+                android:layout_height="@dimen/small_img_height_62dp"
                 android:src="@drawable/cloudy" />
 
             <TextView
@@ -77,7 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                android:text="Cloudy\n22C-23C"
+                android:text="@string/cloudy_n22c_23c"
                 android:autoSizeTextType="uniform" />
         </LinearLayout>
 
@@ -93,12 +96,13 @@
             <TextView
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:text="\n    Wed"
+                android:text="@string/Wednesday"
+                android:paddingStart="@dimen/word_padding"
                 android:textSize="17sp" />
 
             <ImageView
-                android:layout_width="111dp"
-                android:layout_height="62dp"
+                android:layout_width="@dimen/small_img_width_111dp"
+                android:layout_height="@dimen/small_img_height_62dp"
                 android:src="@drawable/rain" />
 
             <TextView
@@ -106,7 +110,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                android:text="Rainy\n20C-21C"
+                android:text="@string/rainy_n20c_21c"
                 android:autoSizeTextType="uniform" />
         </LinearLayout>
 
@@ -122,12 +126,13 @@
             <TextView
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:text="\n    Thu"
+                android:text="@string/Thursday"
+                android:paddingStart="@dimen/word_padding"
                 android:textSize="17sp" />
 
             <ImageView
-                android:layout_width="111dp"
-                android:layout_height="62dp"
+                android:layout_width="@dimen/small_img_width_111dp"
+                android:layout_height="@dimen/small_img_height_62dp"
                 android:src="@drawable/drizzly" />
 
             <TextView
@@ -135,7 +140,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                android:text="Drizzly\n20C-21C"
+                android:text="@string/drizzly_n20c_21c"
                 android:autoSizeTextType="uniform" />
         </LinearLayout>
 
@@ -151,12 +156,13 @@
             <TextView
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:text="\n    Fri"
+                android:text="@string/Friday"
+                android:paddingStart="@dimen/word_padding"
                 android:textSize="17sp" />
 
             <ImageView
-                android:layout_width="111dp"
-                android:layout_height="62dp"
+                android:layout_width="@dimen/small_img_width_111dp"
+                android:layout_height="@dimen/small_img_height_62dp"
                 android:src="@drawable/windy" />
 
             <TextView
@@ -164,7 +170,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                android:text="Windy\n20C-21C"
+                android:text="@string/windy_n20c_21c"
                 android:autoSizeTextType="uniform" />
         </LinearLayout>
 
@@ -180,12 +186,13 @@
             <TextView
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:text="\n    Sat"
+                android:text="@string/Saturday"
+                android:paddingStart="@dimen/word_padding"
                 android:textSize="17sp" />
 
             <ImageView
-                android:layout_width="111dp"
-                android:layout_height="62dp"
+                android:layout_width="@dimen/small_img_width_111dp"
+                android:layout_height="@dimen/small_img_height_62dp"
                 android:src="@drawable/partly_cloudy" />
 
             <TextView
@@ -193,7 +200,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                android:text="Partly Cloudy\n22C-23C"
+                android:text="@string/partly_cloudy_n22c_23c"
                 android:autoSizeTextType="uniform" />
 
         </LinearLayout>
@@ -210,12 +217,13 @@
             <TextView
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:text="\n    Sun"
+                android:text="@string/Sunday"
+                android:paddingStart="@dimen/word_padding"
                 android:textSize="17sp" />
 
             <ImageView
-                android:layout_width="111dp"
-                android:layout_height="62dp"
+                android:layout_width="@dimen/small_img_width_111dp"
+                android:layout_height="@dimen/small_img_height_62dp"
                 android:src="@drawable/partly_cloudy" />
 
             <TextView
@@ -223,7 +231,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                android:text="Partly Cloudy\n22C-23C"
+                android:text="@string/partly_cloudy_n22c_23c"
                 android:autoSizeTextType="uniform" />
 
         </LinearLayout>
@@ -240,12 +248,13 @@
             <TextView
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:text="\n    Mon"
+                android:text="@string/Monday"
+                android:paddingStart="@dimen/word_padding"
                 android:textSize="17sp" />
 
             <ImageView
-                android:layout_width="111dp"
-                android:layout_height="62dp"
+                android:layout_width="@dimen/small_img_width_111dp"
+                android:layout_height="@dimen/small_img_height_62dp"
                 android:src="@drawable/sunny" />
 
             <TextView
@@ -253,7 +262,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                android:text="Sunny\n24C-26C"
+                android:text="@string/sunny_n24c_26c"
                 android:autoSizeTextType="uniform" />
 
         </LinearLayout>
@@ -270,12 +279,13 @@
             <TextView
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:text="\n    Tue"
+                android:text="@string/Tuesday"
+                android:paddingStart="@dimen/word_padding"
                 android:textSize="17sp" />
 
             <ImageView
-                android:layout_width="111dp"
-                android:layout_height="62dp"
+                android:layout_width="@dimen/small_img_width_111dp"
+                android:layout_height="@dimen/small_img_height_62dp"
                 android:src="@drawable/partly_cloudy_windy" />
 
             <TextView
@@ -283,7 +293,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                android:text="Partly Cloudy Windy\n22C-24C"
+                android:text="@string/partly_cloudy_windy_n22c_24c"
                 android:autoSizeTextType="uniform" />
 
         </LinearLayout>

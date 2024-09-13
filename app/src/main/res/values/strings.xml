@@ -11,16 +11,35 @@
 
     <string name="thursday">Thursday</string>
 
-    <string name="first_phase">
+    <string name="first_phase" translatable="false">
         My miracle, heed my prayer. Grant me thine blessing to fulfill thine holy command. Dress
         my body in wounds, lacerate the tattered parchment that clothes my flesh. For I am the
         First Penitent, and you… shall be the last.
     </string>
 
-    <string name="second_phase">
+    <string name="second_phase" translatable="false">
         Now let the crimson bindings finish what they once began. My penance is far from over!
     </string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab_layout_description">Tab Layout</string>
+    <string name="weather_info">20C\nRainy</string>
+    <string name="place_name">Place</string>
+    <string name="Monday">\n Mon</string>
+    <string name="Sunny">sunny</string>
+    <string name="Tuesday">\n Tue</string>
+    <string name="sunny_n25c_27c">Sunny\n25C-27C</string>
+    <string name="cloudy_n22c_23c">Cloudy\n22C-23C</string>
+    <string name="Wednesday">\n Wed</string>
+    <string name="rainy_n20c_21c">Rainy\n20C-21C</string>
+    <string name="Thursday">\n Thu</string>
+    <string name="drizzly_n20c_21c">Drizzly\n20C-21C</string>
+    <string name="Friday">\n Fri</string>
+    <string name="windy_n20c_21c">Windy\n20C-21C</string>
+    <string name="Saturday">\n Sat</string>
+    <string name="partly_cloudy_n22c_23c">Partly Cloudy\n22C-23C</string>
+    <string name="Sunday">\n Sun</string>
+    <string name="sunny_n24c_26c">Sunny\n24C-26C</string>
+    <string name="partly_cloudy_windy_n22c_24c">Partly Cloudy Windy\n22C-24C</string>
 
 </resources>

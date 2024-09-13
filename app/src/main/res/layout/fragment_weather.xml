@@ -15,6 +15,7 @@
         <ImageView
             android:layout_width="357dp"
             android:layout_height="261dp"
+            android:importantForAccessibility="no"
             android:src="@drawable/drizzly" />
     </RelativeLayout>
 
@@ -22,14 +23,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="45dp"
-        android:text="20C\nRainy" />
+        android:text="@string/weather_info" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_margin="45dp"
-        android:text="Place" />
+        android:text="@string/place_name" />
 
 
 </RelativeLayout>
