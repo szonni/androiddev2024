@@ -3,33 +3,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@color/white"
     tools:context=".WeatherFragment">
 
-    <RelativeLayout
-        android:layout_width="350dp"
-        android:layout_height="200dp"
+    <ImageView
+        android:layout_width="357dp"
+        android:layout_height="261dp"
+        android:importantForAccessibility="no"
         android:layout_margin="45dp"
-        android:background="#B6D3CA" >
+        android:src="@drawable/drizzly" />
 
-        <ImageView
-            android:layout_width="357dp"
-            android:layout_height="261dp"
-            android:importantForAccessibility="no"
-            android:src="@drawable/drizzly" />
-    </RelativeLayout>
+    <ImageView
+        android:layout_width="480dp"
+        android:layout_height="270dp"
+        android:importantForAccessibility="no"
+        android:scaleType="fitXY"
+        android:layout_margin="45dp"
+        android:src="@drawable/frame" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="45dp"
+        android:layout_margin="60dp"
         android:text="@string/weather_info" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_margin="45dp"
+        android:layout_margin="60dp"
         android:text="@string/place_name" />
 
 

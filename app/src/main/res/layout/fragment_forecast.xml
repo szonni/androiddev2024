@@ -17,7 +17,7 @@
 
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:background="#6621c458"
+        android:background="@color/dark_green_40alpha"
         android:orientation="vertical" >
 
         <!-- 1st -->

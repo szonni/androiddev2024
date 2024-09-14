@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1c51a6"
+    android:background="@color/dark_blue"
     android:orientation="vertical"
     android:paddingTop="10dp"
     tools:context=".WeatherActivity">
@@ -14,7 +14,7 @@
         android:id="@+id/menu_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#2970e3"
+        android:background="@color/blue"
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/Theme.USTHWeather" />
 

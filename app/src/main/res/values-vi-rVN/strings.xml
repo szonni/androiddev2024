@@ -12,16 +12,6 @@
 
     <string name="thursday">Thursday</string>
 
-    <string name="first_phase" translatable="false">
-        My miracle, heed my prayer. Grant me thine blessing to fulfill thine holy command. Dress
-        my body in wounds, lacerate the tattered parchment that clothes my flesh. For I am the
-        First Penitent, and you… shall be the last.
-    </string>
-
-    <string name="second_phase" translatable="false">
-        Now let the crimson bindings finish what they once began. My penance is far from over!
-    </string>
-
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tab_layout_description">Tab Layout</string>
     <string name="weather_info">20C\nNhiều Mưa</string>
@@ -40,6 +30,6 @@
     <string name="Saturday">\n Thứ 7</string>
     <string name="partly_cloudy_n22c_23c">Có Mây\n22C-23C</string>
     <string name="Sunday">\n Chủ Nhật</string>
-    <string name="sunny_n24c_26c">\Nắngn24C-26C</string>
+    <string name="sunny_n24c_26c">Nắng\n24C-26C</string>
     <string name="partly_cloudy_windy_n22c_24c">Có Mây và Nhiều Gió\n22C-24C</string>
 </resources>
