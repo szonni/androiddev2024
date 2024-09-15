@@ -1,5 +1,6 @@
 package vn.edu.usth.weather;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -19,6 +20,7 @@ public class WeatherActivity extends AppCompatActivity {
     ViewPager2 viewPager2;
     ViewPagerAdapter viewPagerAdapter;
     TabLayout tabLayout;
+    MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,11 @@ public class WeatherActivity extends AppCompatActivity {
             }
         });
         mediator.attach();
+
+        // Music
+        mediaPlayer = null;
+        mediaPlayer = MediaPlayer.create(this, R.raw.virtualboo);
+        mediaPlayer.start();
     }
 
     @Override
@@ -75,6 +82,8 @@ public class WeatherActivity extends AppCompatActivity {
     @Override
     public void onStop() {
         super.onStop();
+        mediaPlayer.release();
+        mediaPlayer = null;
 
         Log.i(tag, "stop");
     }
