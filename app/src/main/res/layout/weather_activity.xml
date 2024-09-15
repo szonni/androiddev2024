@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:background="@color/blue"
         android:minHeight="?attr/actionBarSize"
-        android:theme="@style/Theme.USTHWeather" />
+        android:theme="@style/Base.Theme.USTHWeather" />
 
     <com.google.android.material.tabs.TabLayout
         android:contentDescription="@string/tab_layout_description"

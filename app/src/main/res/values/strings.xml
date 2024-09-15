@@ -41,5 +41,6 @@
     <string name="Sunday">\n Sun</string>
     <string name="sunny_n24c_26c">Sunny\n24C-26C</string>
     <string name="partly_cloudy_windy_n22c_24c">Partly Cloudy Windy\n22C-24C</string>
+    <string name="refresh" translatable="false">Refresh</string>
 
 </resources>
