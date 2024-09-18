@@ -1,10 +1,9 @@
 package vn.edu.usth.weather;
 
+import android.annotation.SuppressLint;
 import android.media.MediaPlayer;
+import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
-import android.os.Message;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,13 +20,7 @@ import com.google.android.material.tabs.TabLayoutMediator;
 
 public class WeatherActivity extends AppCompatActivity {
     private static final String tag = "WeatherActivity";
-    final Handler handler = new Handler(Looper.getMainLooper()) {
-        @Override
-        public void handleMessage(@NonNull Message msg) {
-            String content = msg.getData().getString("server_response");
-            Toast.makeText(WeatherActivity.this, content, Toast.LENGTH_SHORT).show();
-        }
-    };
+    AsyncTask<Void, Integer, String> task;
     ViewPager2 viewPager2;
     ViewPagerAdapter viewPagerAdapter;
     TabLayout tabLayout;
@@ -37,6 +30,10 @@ public class WeatherActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
+
+        // AsyncTask
+        initAsyncTask();
+
         // set view
         setContentView(R.layout.weather_activity);
         // toolbar
@@ -64,6 +61,31 @@ public class WeatherActivity extends AppCompatActivity {
         if (!mediaPlayer.isPlaying()) mediaPlayer.release();
     }
 
+    @SuppressLint("StaticFieldLeak")
+    private void initAsyncTask() {
+        task = new AsyncTask<Void, Integer, String>() {
+            @Override
+            protected String doInBackground(Void... voids) {
+                try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+                return "Network response";
+            }
+
+            @Override
+            protected void onProgressUpdate(Integer... values) {
+                super.onProgressUpdate(values);
+            }
+
+            @Override
+            protected void onPostExecute(String res) {
+                Toast.makeText(WeatherActivity.this, res, Toast.LENGTH_SHORT).show();
+            }
+        };
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -76,29 +98,9 @@ public class WeatherActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         } else if (id == R.id.refresh) {
-            sendRequest();
+            task.execute();
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    private void sendRequest() {
-        Thread t = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(5000);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
-                Bundle bundle = new Bundle();
-                bundle.putString("server_response", "Network response");
-
-                Message msg = new Message();
-                msg.setData(bundle);
-                handler.sendMessage(msg);
-            }
-        });
-        t.start();
     }
 
     @Override
