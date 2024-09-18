@@ -2,6 +2,9 @@ package vn.edu.usth.weather;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,7 +21,13 @@ import com.google.android.material.tabs.TabLayoutMediator;
 
 public class WeatherActivity extends AppCompatActivity {
     private static final String tag = "WeatherActivity";
-
+    final Handler handler = new Handler(Looper.getMainLooper()) {
+        @Override
+        public void handleMessage(@NonNull Message msg) {
+            String content = msg.getData().getString("server_response");
+            Toast.makeText(WeatherActivity.this, content, Toast.LENGTH_SHORT).show();
+        }
+    };
     ViewPager2 viewPager2;
     ViewPagerAdapter viewPagerAdapter;
     TabLayout tabLayout;
@@ -52,6 +61,7 @@ public class WeatherActivity extends AppCompatActivity {
         mediaPlayer = null;
         mediaPlayer = MediaPlayer.create(this, R.raw.virtualboo);
         mediaPlayer.start();
+        if (!mediaPlayer.isPlaying()) mediaPlayer.release();
     }
 
     @Override
@@ -66,9 +76,29 @@ public class WeatherActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         } else if (id == R.id.refresh) {
-            Toast.makeText(this, "Refresh", Toast.LENGTH_SHORT).show();
+            sendRequest();
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void sendRequest() {
+        Thread t = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+                Bundle bundle = new Bundle();
+                bundle.putString("server_response", "Network response");
+
+                Message msg = new Message();
+                msg.setData(bundle);
+                handler.sendMessage(msg);
+            }
+        });
+        t.start();
     }
 
     @Override
@@ -88,6 +118,8 @@ public class WeatherActivity extends AppCompatActivity {
     @Override
     public void onPause() {
         super.onPause();
+        if (mediaPlayer.isPlaying()) mediaPlayer.release();
+        if (mediaPlayer != null) mediaPlayer = null;
 
         Log.i(tag, "pause");
     }
@@ -95,8 +127,6 @@ public class WeatherActivity extends AppCompatActivity {
     @Override
     public void onStop() {
         super.onStop();
-        mediaPlayer.release();
-        mediaPlayer = null;
 
         Log.i(tag, "stop");
     }
