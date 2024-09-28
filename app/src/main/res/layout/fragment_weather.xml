@@ -6,11 +6,20 @@
     android:background="@color/white"
     tools:context=".WeatherFragment">
 
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:contentDescription="back_ground"
+        tools:ignore="HardcodedText" />
+
     <ImageView
         android:layout_width="357dp"
         android:layout_height="261dp"
         android:importantForAccessibility="no"
         android:layout_margin="45dp"
+        android:background="@color/white"
         android:src="@drawable/drizzly" />
 
     <ImageView

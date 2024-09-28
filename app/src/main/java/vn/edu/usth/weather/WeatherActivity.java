@@ -1,12 +1,16 @@
 package vn.edu.usth.weather;
 
 import android.annotation.SuppressLint;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.media.MediaPlayer;
+import android.nfc.Tag;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -18,9 +22,15 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
 public class WeatherActivity extends AppCompatActivity {
     private static final String tag = "WeatherActivity";
-    AsyncTask<Void, Integer, String> task;
+    AsyncTask<Void, Integer, Bitmap> task;
     ViewPager2 viewPager2;
     ViewPagerAdapter viewPagerAdapter;
     TabLayout tabLayout;
@@ -33,6 +43,7 @@ public class WeatherActivity extends AppCompatActivity {
 
         // AsyncTask
         initAsyncTask();
+        task.execute();
 
         // set view
         setContentView(R.layout.weather_activity);
@@ -63,15 +74,30 @@ public class WeatherActivity extends AppCompatActivity {
 
     @SuppressLint("StaticFieldLeak")
     private void initAsyncTask() {
-        task = new AsyncTask<Void, Integer, String>() {
+        task = new AsyncTask<Void, Integer, Bitmap>() {
             @Override
-            protected String doInBackground(Void... voids) {
+            protected Bitmap doInBackground(Void... voids) throws RuntimeException {
+
                 try {
-                    Thread.sleep(5000);
-                } catch (InterruptedException e) {
+                    URL url = new URL("https://i.pinimg.com/originals/28/db/ff/28dbffd19ce1ec872dc51f62725b8d51.jpg");
+
+                    HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                    connection.setRequestMethod("GET");
+                    connection.setDoInput(true);
+                    connection.connect();
+
+                    int response = connection.getResponseCode();
+                    Log.i(tag, "The response is: " + response);
+                    InputStream is = connection.getInputStream();
+
+                    Bitmap bitmap = BitmapFactory.decodeStream(is);
+
+                    connection.disconnect();
+
+                    return bitmap;
+                } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
-                return "Network response";
             }
 
             @Override
@@ -80,8 +106,9 @@ public class WeatherActivity extends AppCompatActivity {
             }
 
             @Override
-            protected void onPostExecute(String res) {
-                Toast.makeText(WeatherActivity.this, res, Toast.LENGTH_SHORT).show();
+            protected void onPostExecute(Bitmap bit) {
+                ImageView bg = (ImageView) findViewById(R.id.background);
+                bg.setImageBitmap(bit);
             }
         };
     }
@@ -98,7 +125,7 @@ public class WeatherActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         } else if (id == R.id.refresh) {
-            task.execute();
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }
